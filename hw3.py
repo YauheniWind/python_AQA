@@ -52,7 +52,7 @@ def reverse_string(string):
 result_5 = reverse_string("Ivanov Ivan")
 print(result_5)
 
-
+# Task 5
 def delete_space(string):
     if type(string) == str:
         return f"{string}".strip()
