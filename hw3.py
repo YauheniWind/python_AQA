@@ -79,9 +79,12 @@ print(x[3:16:3])
 
 # Task 10
 def uniq_number(array):
-    for item in array:
-        if array.count(item) == 1:
-            return f"Non-repeated item: {item}"
+    if type(array) == list:
+        for item in array:
+            if array.count(item) == 1:
+                return f"Non-repeated item: {item}"
+    else:
+        return f"something wrong {array}"
 
 
 pair_arr = [1, 5, 2, 9, 2, 9, 1]
