@@ -38,6 +38,21 @@ result_4 = add_ing("run")
 print(result_4)
 
 
+# Task 4
+def reverse_string(string):
+    if type(string) == str:
+        split_string = string.split()
+        split_string.reverse()
+        join_str = " ".join(split_string)
+        return join_str
+    else:
+        return f"something wrong {string}"
+
+
+result_5 = reverse_string("Ivanov Ivan")
+print(result_5)
+
+
 def delete_space(string):
     if type(string) == str:
         return f"{string}".strip()
@@ -45,8 +60,8 @@ def delete_space(string):
         return f"something wrong {string}"
 
 
-result_5 = delete_space("    Hello world    ")
-print(result_5)
+result_6 = delete_space("    Hello world    ")
+print(result_6)
 
 
 # Task 6
@@ -67,8 +82,8 @@ def string_in_other_string(string_one, string_two):
         return f"something wrong {string_one}, {string_two}"
 
 
-result_6 = string_in_other_string("employ", "employment")
-print(result_6)
+result_7 = string_in_other_string("employ", "employment")
+print(result_7)
 
 
 # Task 9
@@ -88,6 +103,6 @@ def uniq_number(array):
 
 
 pair_arr = [1, 5, 2, 9, 2, 9, 1]
-result_7 = uniq_number(pair_arr)
+result_8 = uniq_number(pair_arr)
 
-print(result_7)
+print(result_8)
