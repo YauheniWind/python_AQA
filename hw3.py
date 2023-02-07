@@ -1,9 +1,9 @@
 # Task 1
 def change_to_int(a):
-    if type(a) == bool or type(a) == str:
-        return a
-    else:
+    if type(a) == float:
         return int(a)
+    else:
+        return a
 
 
 result_1 = change_to_int(1.6)
@@ -51,6 +51,7 @@ def reverse_string(string):
 
 result_5 = reverse_string("Ivanov Ivan")
 print(result_5)
+
 
 # Task 5
 def delete_space(string):
