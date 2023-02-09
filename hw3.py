@@ -3,7 +3,7 @@ def change_to_int(a):
     if type(a) == float:
         return int(a)
     else:
-        return a
+        return f"something wrong {a}"
 
 
 result_1 = change_to_int(1.6)
@@ -15,8 +15,7 @@ print(result_2)
 # Task 2
 def change_symbol(string, old_symbol, new_symbol):
     if type(string) == str:
-        new_string = string.replace(old_symbol, new_symbol)
-        return new_string
+        return string.replace(old_symbol, new_symbol)
     else:
         return f"Is not a string {string}"
 
@@ -27,11 +26,7 @@ print(result_3)
 
 # Task 3
 def add_ing(string):
-    if type(string) == str:
-        ing_string = f"{string}ing"
-        return ing_string
-    else:
-        return f"something wrong {string}"
+    return f"{string}ing"
 
 
 result_4 = add_ing("run")
@@ -64,11 +59,9 @@ def delete_space(string):
 result_6 = delete_space("    Hello world    ")
 print(result_6)
 
-
 # Task 6
 school = {"1a": 10, "1b": 20, "1c": 11, "1d": 21, "1e": 5, "1f": 33, "1g": 9, "1h": 2, "1j": 18}
 print(school)
-
 
 # Task 7
 list_of_something = [1, 2, "Hola", 76]
@@ -85,7 +78,6 @@ def string_in_other_string(string_one, string_two):
 
 result_7 = string_in_other_string("employ", "employment")
 print(result_7)
-
 
 # Task 9
 x = "My name is Agent Smith"
