@@ -26,7 +26,10 @@ print(result_3)
 
 # Task 3
 def add_ing(string):
-    return f"{string}ing"
+    if string.isnumeric():
+        return string
+    else:
+        return f"{string}ing"
 
 
 result_4 = add_ing("run")
