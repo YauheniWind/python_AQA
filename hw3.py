@@ -63,7 +63,17 @@ result_6 = delete_space("    Hello world    ")
 print(result_6)
 
 # Task 6
-school = {"1a": 10, "1b": 20, "1c": 11, "1d": 21, "1e": 5, "1f": 33, "1g": 9, "1h": 2, "1j": 18}
+school = {
+    "1a": 10,
+    "1b": 20,
+    "1c": 11,
+    "1d": 21,
+    "1e": 5,
+    "1f": 33,
+    "1g": 9,
+    "1h": 2,
+    "1j": 18,
+}
 print(school)
 
 # Task 7
