@@ -1,67 +1,91 @@
-number_plus_one = 10
+number_plus_one = "10"
 
-if number_plus_one > 0:
-    number_plus_one += 1
 
-print(number_plus_one)
+def add(number):
+    if type(number) == int or type(number) == float and number > 0:
+        return number + 1
+    else:
+        return f"Error {type(number)} in not a number"
+
+
+number_plus_one_val = add(number_plus_one)
+print(number_plus_one_val)
 
 number_one = 2
 number_two = 5
 number_three = -10
 counter = 0
 
-if number_one > 0:
-    counter += 1
-if number_two > 0:
-    counter += 1
-if number_three > 0:
-    counter += 1
 
-print(f"Positive numbers: {counter}")
+def count_positive_numbers(counter_positive, *args):
+    for i in args:
+        if i > 0:
+            return counter_positive + i
+
+
+print(
+    f"Positive numbers: {count_positive_numbers(counter, number_one, number_two, number_three)}"
+)
 
 year = int(input("Enter number of year: "))
-if year % 4 != 0:
-    print('365')
-elif year % 100 != 0:
-    print('366')
-elif year % 400 != 0:
-    print('365')
-else:
-    print('366')
+
+
+def counting_year(a):
+    if a % 4 != 0:
+        print("365")
+    elif a % 100 != 0:
+        print("366")
+    elif a % 400 != 0:
+        print("365")
+    else:
+        print("366")
+
+
+counting_year(year)
 
 day = int(input("Enter number in range 1-7: "))
 
-match day:
-    case 1:
-        print("Monday")
-    case 2:
-        print("Tuesday")
-    case 3:
-        print("Wednesday")
-    case 4:
-        print("Thursday")
-    case 5:
-        print("Friday")
-    case 6:
-        print("Saturday")
-    case 7:
-        print("Sunday")
-    case _:
-        print("Out of range")
 
-unit_of_measurement = int(input("Enter unit of measurement: "))
+def what_day_is_it_today(number):
+    match number:
+        case 1:
+            return "Monday"
+        case 2:
+            return "Tuesday"
+        case 3:
+            return "Wednesday"
+        case 4:
+            return "Thursday"
+        case 5:
+            return "Friday"
+        case 6:
+            return "Saturday"
+        case 7:
+            return "Sunday"
+        case _:
+            return "Out of range"
+
+
+print(what_day_is_it_today(day))
+
+unit_of_measurement = int(input("Enter unit of measurement in range 1-5: "))
 body_weight = int(input("Enter body weight: "))
 
-match unit_of_measurement:
-    case 1:
-        print(body_weight)
-    case 2:
-        print(body_weight / 1000000)
-    case 3:
-        print(body_weight / 1000)
-    case 4:
-        print(body_weight * 1000)
-    case 5:
-        print(body_weight * 100)
-    case _:
-        print("Out of range")
+
+def body_weight_in_kilo(measurement, body_w):
+    match measurement:
+        case 1:
+            return body_w
+        case 2:
+            return body_w / 1000000
+        case 3:
+            return body_w / 1000
+        case 4:
+            return body_w * 1000
+        case 5:
+            return body_w * 100
+        case _:
+            return "Out of range"
+
+
+print(body_weight_in_kilo(unit_of_measurement, body_weight))
