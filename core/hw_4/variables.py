@@ -31,11 +31,3 @@ def string_var(str_one, str_two):
 
 # var_str += "No" + "Yes" * 3
 var_str_from_def = string_var(var_str, "Yes")
-
-print(
-    f"""var_int: {var_big_int_division}
-var_float: {var_float_from_def}
-var_str: {var_str_from_def}
-big_int: {var_big_int_division}
-            """
-)

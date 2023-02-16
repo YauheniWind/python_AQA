@@ -7,15 +7,11 @@ def change_list(list_one, list_two):
     return list_one[1], list_two
 
 
-print(change_list(list_of_names, list_of_numbers))
-
-
 def join_lists(list_one, list_two):
     return list_one + list_two
 
 
 list_of_names_and_numbers = join_lists(list_of_names, list_of_numbers)
-print(list_of_names_and_numbers)
 
 
 def slice_list(join_list):
@@ -23,7 +19,6 @@ def slice_list(join_list):
 
 
 slice_of_list = slice_list(list_of_names_and_numbers)
-print(slice_of_list)
 
 
 def add_elements(list_of_el, *args):
@@ -32,7 +27,6 @@ def add_elements(list_of_el, *args):
 
 
 slice_of_list = add_elements(slice_of_list, 34, "Nikita")
-print(slice_of_list)
 
 
 def intersection_list(list_one, list_two):
@@ -43,8 +37,6 @@ a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
 intersection_val = intersection_list(a, b)
-
-print(f"Intersection of two lists: {intersection_val}")
 
 
 def uniq_list(only_one):

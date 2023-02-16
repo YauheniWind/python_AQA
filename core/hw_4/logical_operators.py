@@ -8,7 +8,6 @@ def true_operations(operand_one, operand_two, val_one, val_two):
 
 first_true = true_operations(number_one, number_two, 9, 7)
 second_true = true_operations(number_one, number_two, 6, 4)
-print(first_true, second_true)
 
 
 def false_operations(operand_one, operand_two, val_one, val_two):
@@ -46,4 +45,3 @@ def try_str(str_one, str_two):
 
 
 first_try = try_str(string_one, string_two)
-print(first_try)

@@ -6,12 +6,6 @@ def change_to_int(a):
         return f"something wrong {a}"
 
 
-result_1 = change_to_int(1.6)
-result_2 = change_to_int(2.99)
-print(result_1)
-print(result_2)
-
-
 # Task 2
 def change_symbol(string, old_symbol, new_symbol):
     if type(string) == str:
@@ -20,20 +14,12 @@ def change_symbol(string, old_symbol, new_symbol):
         return f"Is not a string {string}"
 
 
-result_3 = change_symbol("www.my_site.com#about", "#", "/")
-print(result_3)
-
-
 # Task 3
 def add_ing(string):
     if string.isnumeric():
         return string
     else:
         return f"{string}ing"
-
-
-result_4 = add_ing("run")
-print(result_4)
 
 
 # Task 4
@@ -47,10 +33,6 @@ def reverse_string(string):
         return f"something wrong {string}"
 
 
-result_5 = reverse_string("Ivanov Ivan")
-print(result_5)
-
-
 # Task 5
 def delete_space(string):
     if type(string) == str:
@@ -58,9 +40,6 @@ def delete_space(string):
     else:
         return f"something wrong {string}"
 
-
-result_6 = delete_space("    Hello world    ")
-print(result_6)
 
 # Task 6
 school = {
@@ -89,9 +68,6 @@ def string_in_other_string(string_one, string_two):
         return f"something wrong {string_one}, {string_two}"
 
 
-result_7 = string_in_other_string("employ", "employment")
-print(result_7)
-
 # Task 9
 x = "My name is Agent Smith"
 print(x[1])
@@ -106,9 +82,3 @@ def uniq_number(array):
                 return f"Non-repeated item: {item}"
     else:
         return f"something wrong {array}"
-
-
-pair_arr = [1, 5, 2, 9, 2, 9, 1]
-result_8 = uniq_number(pair_arr)
-
-print(result_8)
