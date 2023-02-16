@@ -40,27 +40,36 @@ print(join_strings(love_list))
 
 somthing_list = [12, 34, 56, 76, 234, 546, 6322, 5677, 23, 34]
 
-somthing_list.insert(3, 44)
-somthing_list.pop(6)
-print(f"Update list: {somthing_list}")
+
+def insert_and_pop_element(list_of_el, insert_el_one, insert_el_two, pop_el):
+    list_of_el.insert(insert_el_one, insert_el_two)
+    list_of_el.pop(pop_el)
+    return list_of_el
+
+
+print(f"Update list: {insert_and_pop_element(somthing_list, 3, 44, 6)}")
 
 a = {"a": 1, "b": 2, "c": 3}
 b = {"c": 3, "d": 4, "e": 5}
 ab = {}
 
-for key, value in a.items():
-    if key in b:
-        ab[key] = [a[key], b[key]]
-    else:
-        ab[key] = [value, None]
 
-for key, value in b.items():
-    if key in a:
-        ab[key] = [a[key], b[key]]
-    else:
-        ab[key] = [None, value]
+def reunion(dict_one, dict_two, reunio_dict):
+    for key, value in dict_one.items():
+        if key in dict_two:
+            reunio_dict[key] = [dict_one[key], dict_two[key]]
+        else:
+            reunio_dict[key] = [value, None]
 
-print(ab)
+    for key, value in dict_two.items():
+        if key in dict_one:
+            reunio_dict[key] = [dict_one[key], dict_two[key]]
+        else:
+            reunio_dict[key] = [None, value]
+    return reunio_dict
+
+
+print(reunion(a, b, ab))
 
 
 def uniq_number(array):
