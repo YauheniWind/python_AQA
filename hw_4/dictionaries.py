@@ -10,8 +10,14 @@ school = {
     "1j": 18,
 }
 print(school)
-for number_of_class, people in school.items():
-    print(f"Class: {number_of_class}, Number of students: {people}")
+
+
+def count_people(dic):
+    for number_of_class, people in dic.items():
+        print(f"Class: {number_of_class}, Number of students: {people}")
+
+
+count_people(school)
 
 
 def change_students(dictionaries, key, value):
