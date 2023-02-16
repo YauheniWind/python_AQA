@@ -14,17 +14,18 @@ print(number_plus_one_val)
 number_one = 2
 number_two = 5
 number_three = -10
-counter = 0
 
 
-def count_positive_numbers(counter_positive, *args):
+def count_positive_numbers(*args):
+    counter_positive = 0
     for i in args:
         if i > 0:
-            return counter_positive + i
+            counter_positive += 1
+    return counter_positive
 
 
 print(
-    f"Positive numbers: {count_positive_numbers(counter, number_one, number_two, number_three)}"
+    f"Positive numbers: {count_positive_numbers(number_one, number_two, number_three)}"
 )
 
 year = int(input("Enter number of year: "))
@@ -32,13 +33,13 @@ year = int(input("Enter number of year: "))
 
 def counting_year(a):
     if a % 4 != 0:
-        print("365")
+        return "365"
     elif a % 100 != 0:
-        print("366")
+        return "366"
     elif a % 400 != 0:
-        print("365")
+        return "365"
     else:
-        print("366")
+        return "366"
 
 
 counting_year(year)

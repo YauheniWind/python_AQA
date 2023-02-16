@@ -1,119 +1,81 @@
-import core.hw_3.hw3
-from core.hw_4 import variables
-from core.hw_4 import strings
-from core.hw_4 import lists
-from core.hw_4 import logical_operators
-from core.hw_4 import dictionaries
-from core.hw_4 import type_conversions
-from core.hw_4 import conditions
-from core.hw_4 import loop_for
-from core.hw_4 import loop_while
+import hw_3
+import hw_4
 
 # HW_3
-print(core.hw_3.hw3.change_to_int(1.6))
-print(core.hw_3.hw3.change_to_int(2.99))
-print(core.hw_3.hw3.change_symbol("www.my_site.com#about", "#", "/"))
-print(core.hw_3.hw3.add_ing("run"))
-print(core.hw_3.hw3.reverse_string("Ivanov Ivan"))
-print(core.hw_3.hw3.delete_space("    Hello world    "))
-print(core.hw_3.hw3.string_in_other_string("employ", "employment"))
-print(core.hw_3.hw3.uniq_number([1, 5, 2, 9, 2, 9, 1]))
+print(hw_3.hw3.change_to_int(1.6))
+print(hw_3.hw3.change_to_int(2.99))
+print(hw_3.hw3.change_symbol("www.my_site.com#about", "#", "/"))
+print(hw_3.hw3.add_ing("run"))
+print(hw_3.hw3.reverse_string("Ivanov Ivan"))
+print(hw_3.hw3.delete_space("    Hello world    "))
+print(hw_3.hw3.string_in_other_string("employ", "employment"))
+print(hw_3.hw3.uniq_number([1, 5, 2, 9, 2, 9, 1]))
 
 # HW_4_variables
-print(variables.big_int(10, 3.5))
-print(variables.reduction(8.4, 1))
-print(variables.division(10, 84))
-print(variables.string_var("No", "Yes"))
-
+print("fff", hw_4.big_int(10, 3.5))
+print(hw_4.reduction(8.4, 1))
+print(hw_4.division(10, 84))
+print(hw_4.string_var("No", "Yes"))
 # HW_4_strings
-print(strings.change_string("HelloWorld"))
-print(strings.long_string("HelloMyNameIsEv"))
-print(strings.name_in_string("Ev"))
-print(strings.trying("Hello world!"))
+print(hw_4.change_string("HelloWorld"))
+print(hw_4.long_string("HelloMyNameIsEv"))
+print(hw_4.name_in_string("Ev"))
+print(hw_4.trying("Hello world!"))
 
 # HW_4_lists
-print(lists.change_list(["Ev", "Rick", "Amanda"], [22, 54, 89]))
-print(lists.join_lists(["Ev", "Rick", "Amanda"], [22, 54, 89]))
-print(lists.slice_list(lists.join_lists(["Ev", "Rick", "Amanda"], [22, 54, 89])))
-print(lists.add_elements(lists.slice_of_list, 34, "Nikita"))
-print(lists.intersection_list(lists.a, lists.b))
-print(lists.uniq_list(lists.uniq))
+print(hw_4.change_list(["Ev", "Rick", "Amanda"], [22, 54, 89]))
+print(hw_4.join_lists(["Ev", "Rick", "Amanda"], [22, 54, 89]))
+print(hw_4.slice_list(hw_4.join_lists(["Ev", "Rick", "Amanda"], [22, 54, 89])))
+print(hw_4.add_elements(hw_4.slice_of_list, 34, "Nikita"))
+print(hw_4.intersection_list(hw_4.a, hw_4.b))
+print(hw_4.uniq_list(hw_4.uniq))
 
 # HW_4_logical_operators
-print(
-    logical_operators.true_operations(
-        logical_operators.number_one, logical_operators.number_two, 9, 7
-    )
-)
-print(
-    logical_operators.false_operations(
-        logical_operators.number_one, logical_operators.number_two, 50, 70
-    )
-)
-print(
-    logical_operators.true_or_operation(
-        logical_operators.number_one, logical_operators.number_two, 9, 7
-    )
-)
-print(
-    logical_operators.false_or_operation(
-        logical_operators.number_one, logical_operators.number_two, 50, 7
-    )
-)
-print(
-    logical_operators.try_str(
-        logical_operators.string_one, logical_operators.string_two
-    )
-)
+print(hw_4.true_operations(hw_4.number_one, hw_4.number_two, 9, 7))
+print(hw_4.false_operations(hw_4.number_one, hw_4.number_two, 50, 70))
+print(hw_4.true_or_operation(hw_4.number_one, hw_4.number_two, 9, 7))
+print(hw_4.false_or_operation(hw_4.number_one, hw_4.number_two, 50, 7))
+print(hw_4.try_str(hw_4.string_one, hw_4.string_two))
 
 # HW_4_dictionaries
-print(dictionaries.count_people(dictionaries.school))
-print(dictionaries.change_students(dictionaries.school, "1a", 2))
-print(dictionaries.add_class(dictionaries.school, "1z", 65))
-print(dictionaries.clear_class(dictionaries.school, "1z"))
+print(hw_4.count_people(hw_4.school))
+print(hw_4.change_students(hw_4.school, "1a", 2))
+print(hw_4.add_class(hw_4.school, "1z", 65))
+print(hw_4.clear_class(hw_4.school, "1z"))
 
 # HW_4_type_conversions
-print(type_conversions.string_to_array(type_conversions.robin_name))
+print(hw_4.string_to_array(hw_4.robin_name))
 print(
-    type_conversions.greeting(
-        type_conversions.ivan_name,
-        type_conversions.name_of_city,
-        type_conversions.name_of_country,
+    hw_4.greeting(
+        hw_4.ivan_name,
+        hw_4.name_of_city,
+        hw_4.name_of_country,
     )
 )
-print(type_conversions.join_strings(type_conversions.love_list))
-print(type_conversions.insert_and_pop_element(type_conversions.somthing_list, 1, 4, 6))
-print(
-    type_conversions.reunion(
-        type_conversions.a, type_conversions.b, type_conversions.ab
-    )
-)
-print(type_conversions.count_letter(type_conversions.sometext))
+print(hw_4.join_strings(hw_4.love_list))
+print(hw_4.insert_and_pop_element(hw_4.somthing_list, 1, 4, 6))
+print(hw_4.reunion(hw_4.a, hw_4.b, hw_4.ab))
+print(hw_4.count_letter(hw_4.sometext))
 
 # HW_4_conditions
-print(conditions.add(10))
+print(hw_4.add(10))
 print(
-    conditions.count_positive_numbers(
-        conditions.counter,
-        conditions.number_one,
-        conditions.number_two,
-        conditions.number_three,
+    hw_4.count_positive_numbers(
+        hw_4.number_one,
+        hw_4.number_two,
+        hw_4.number_three,
     )
 )
-print(conditions.counting_year(conditions.year))
-print(conditions.what_day_is_it_today(conditions.day))
-print(
-    conditions.body_weight_in_kilo(
-        conditions.unit_of_measurement, conditions.body_weight
-    )
-)
+print(hw_4.counting_year(hw_4.year))
+print(hw_4.what_day_is_it_today(hw_4.day))
+print(hw_4.body_weight_in_kilo(hw_4.unit_of_measurement, hw_4.body_weight))
 
 # HW_4_loop_for
-print(loop_for.plus_in_range(loop_for.first_number, loop_for.second_number))
-print(loop_for.winner(loop_for.dict_of_swim))
+print(hw_4.plus_in_range(hw_4.first_number, hw_4.second_number))
+print(hw_4.winner(hw_4.dict_of_swim))
 
 # HW_4_loop_while
-print(loop_while.number_product(5))
-print(loop_while.area_calculation(loop_while.s1, loop_while.s2))
-print(loop_while.count_number(123))
-print(loop_while.range_between(2, 40))
+print(hw_4.number_product(5))
+print(hw_4.area_calculation(hw_4.s1, hw_4.s2))
+print(hw_4.count_number(123))
+print(hw_4.range_between(2, 40))
