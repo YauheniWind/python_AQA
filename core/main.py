@@ -12,7 +12,7 @@ print(hw_3.hw3.string_in_other_string("employ", "employment"))
 print(hw_3.hw3.uniq_number([1, 5, 2, 9, 2, 9, 1]))
 
 # HW_4_variables
-print("fff", hw_4.big_int(10, 3.5))
+print(hw_4.big_int(10, 3.5))
 print(hw_4.reduction(8.4, 1))
 print(hw_4.division(10, 84))
 print(hw_4.string_var("No", "Yes"))

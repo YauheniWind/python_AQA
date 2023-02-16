@@ -42,7 +42,7 @@ def counting_year(a):
         return "366"
 
 
-counting_year(year)
+print(counting_year(year))
 
 day = int(input("Enter number in range 1-7: "))
 
