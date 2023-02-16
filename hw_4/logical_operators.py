@@ -1,27 +1,49 @@
 number_one = 13
 number_two = 8
 
-first_true = number_one > 9 and number_two > 7
-second_true = number_one > 6 and number_two > 4
+
+def true_operations(operand_one, operand_two, val_one, val_two):
+    return operand_one > val_one and operand_two > val_two
+
+
+first_true = true_operations(number_one, number_two, 9, 7)
+second_true = true_operations(number_one, number_two, 6, 4)
 print(first_true, second_true)
 
-first_false = number_two > number_one and number_one < number_two
-second_false = number_one > 14 and number_two < 1
+
+def false_operations(operand_one, operand_two, val_one, val_two):
+    return operand_one > val_one and operand_two > val_two
+
+
+first_false = false_operations(number_one, number_two, 50, 10)
+second_false = false_operations(number_one, number_two, 14, 9)
 print(first_false, second_false)
 
 
-first_or_true = number_one > 10 or number_two < 1
-second_or_true = number_two >= 8 or number_one == 19
+def true_or_operation(operand_one, operand_two, val_one, val_two):
+    return operand_one >= val_one or operand_two == val_two
+
+
+first_or_true = true_or_operation(number_one, number_two, 13, 19)
+second_or_true = true_or_operation(number_one, number_two, 8, 13)
 print(first_or_true, second_or_true)
 
-first_or_false = number_one > 50 or number_two < 7
-second_or_false = (
-    number_two < 1 and number_one > 100 or number_one > 20 and number_two < 1
-)
+
+def false_or_operation(operand_one, operand_two, val_one, val_two):
+    return operand_one > val_one or operand_two < val_two
+
+
+first_or_false = false_or_operation(number_one, number_two, 50, 7)
+second_or_false = false_or_operation(number_one, number_two, 100, 1)
 print(first_or_false, second_or_false)
 
 string_one = "Hello"
 string_two = "aaabbb"
 
-first_try = string_one > string_two or string_two < string_one
+
+def try_str(str_one, str_two):
+    return str_one > str_two
+
+
+first_try = try_str(string_one, string_two)
 print(first_try)
