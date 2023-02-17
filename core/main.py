@@ -2,15 +2,17 @@ import hw_3
 import hw_4
 
 # HW_3
-print(hw_3.hw3.change_to_int(1.6))
-print(hw_3.hw3.change_to_int(2.99))
-print(hw_3.hw3.change_symbol("www.my_site.com#about", "#", "/"))
-print(hw_3.hw3.add_ing("run"))
-print(hw_3.hw3.reverse_string("Ivanov Ivan"))
-print(hw_3.hw3.delete_space("    Hello world    "))
-print(hw_3.hw3.string_in_other_string("employ", "employment"))
-print(hw_3.hw3.uniq_number([1, 5, 2, 9, 2, 9, 1]))
+print("-------HW_3-------")
+print(hw_3.change_to_int(1.6))
+print(hw_3.change_to_int(2.99))
+print(hw_3.change_symbol("www.my_site.com#about", "#", "/"))
+print(hw_3.add_ing("run"))
+print(hw_3.reverse_string("Ivanov Ivan"))
+print(hw_3.delete_space("    Hello world    "))
+print(hw_3.string_in_other_string("employ", "employment"))
+print(hw_3.uniq_number([1, 5, 2, 9, 2, 9, 1]))
 
+print("-------HW_4-------")
 # HW_4_variables
 print(hw_4.big_int(10, 3.5))
 print(hw_4.reduction(8.4, 1))
