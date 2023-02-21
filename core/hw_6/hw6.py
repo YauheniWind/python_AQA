@@ -9,7 +9,9 @@ def check_element(name_of_file: str):
     elif name_of_file.endswith("txt"):
         with open(name_of_file) as file:
             for element in file:
+                # made int list
                 list_element = list(map(int, element))
+                #  checking element != < 3
                 if len(list_element) < 3:
                     return "Error in file fewer elements than 3"
                 else:
@@ -36,9 +38,12 @@ def separate_files(name_of_file: str, name_of_even: str, name_of_odd: str):
         odd_numbers = []
         with open(name_of_file) as file:
             for element in file:
+                # split elements
                 split_element = element.split(" ")
+                # list of str
                 str_elem = list(map(str, split_element))
                 for i in str_elem:
+                    # checking even numbers
                     if int(i) % 2 == 0:
                         even_numbers.append(i)
                         file_even = open(name_of_even, "w")
@@ -90,7 +95,7 @@ square_var = squareding("real_numbers.txt")
 def add_in_binary_file(name_of_file: str, data_value: any, encode: bool = True):
     # Crate file with some data
     a = data_value
-    if encode == True:
+    if encode is True:
         a = data_value.encode("utf8")
     with open(name_of_file, "wb+") as file:
         file.write(a)
@@ -110,7 +115,7 @@ def swaapiii(file_one: str, file_two: str):
     return f"{bdata_read_one} {bdata_read_two}"
 
 
-def read_bin_file(file):
+def read_bin_file(file: str):
     # read files
     with open(file, "rb+") as f1:
         bdata_read = f1.read()
@@ -127,4 +132,3 @@ swaapiii(
 
 read_bin_one = read_bin_file("change_file_one.bin")
 read_bin_two = read_bin_file("change_file_two.bin")
-print(read_bin_one, read_bin_two)
