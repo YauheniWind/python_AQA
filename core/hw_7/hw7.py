@@ -60,8 +60,8 @@ def cesar_encode(word, shift, language="EU"):
             shift_place = place + shift
             encode += alphabet_EU[shift_place]
     else:
-        for char_eu in word:
-            place = alphabet_RU.find(char_eu)
+        for char_ru in word:
+            place = alphabet_RU.find(char_ru)
             shift_place = place + shift
             encode += alphabet_RU[shift_place]
 
@@ -72,8 +72,8 @@ def cesar_decode(word, shift):
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
     decode = ""
 
-    for char_eu in word:
-        place = alphabet.find(char_eu)
+    for char in word:
+        place = alphabet.find(char)
         shift_place = place - shift
         decode += alphabet[shift_place]
 
