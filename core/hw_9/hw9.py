@@ -1,4 +1,4 @@
-class House:
+class Building:
     def __init__(self, floors: int, height: float, width: float):
         self.floor = floors
         self.height = height
@@ -25,12 +25,12 @@ class House:
             print(f"In this {self.__class__.__name__} living {tenants} Tenants")
 
 
-house = House(2, 10, 10)
+house = Building(2, 10, 10)
 house.show_params()
 print(house.work_space())
 
 
-class Skyscraper(House):
+class Skyscraper(Building):
     def __init__(self, floors: int, height: float, width: float, elevator: bool):
         super().__init__(floors, height, width)
         self.elevator = elevator
@@ -50,7 +50,7 @@ skyscraper.show_params()
 print(skyscraper.work_space())
 
 
-class Mansion(House):
+class Mansion(Building):
     def __init__(self, floors: int, height: float, width: float, pool: bool):
         super().__init__(floors, height, width)
         self.pool = pool
