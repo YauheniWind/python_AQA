@@ -44,3 +44,43 @@ def count(word, counting_list):
 
 for i in count(sentence, count_list):
     print(i)
+
+languages = input("Enter language RU/EU: ").upper()
+message = input("Enter message: ").upper()
+move = int(input("Enter shift: "))
+
+
+def cesar_encode(word, shift, language="EU"):
+    alphabet_EU = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    alphabet_RU = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+    encode = ""
+    if language == "EU":
+        for char_eu in word:
+            place = alphabet_EU.find(char_eu)
+            shift_place = place + shift
+            encode += alphabet_EU[shift_place]
+    else:
+        for char_ru in word:
+            place = alphabet_RU.find(char_ru)
+            shift_place = place + shift
+            encode += alphabet_RU[shift_place]
+
+    return encode
+
+
+def cesar_decode(word, shift):
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+    decode = ""
+
+    for char in word:
+        place = alphabet.find(char)
+        shift_place = place - shift
+        decode += alphabet[shift_place]
+
+    return decode
+
+
+encode_mes = cesar_encode(message, move, languages)
+decode_mes = cesar_decode(encode_mes, move)
+print(encode_mes)
+print(decode_mes)
