@@ -25,19 +25,18 @@ class Bouquet:
         self.list_of_flower = list_of_flower
 
     def deadline_flower(self):
-        deadline_list = []
-        for i in self.list_of_flower:
-            deadline_list.append(i.deadline)
 
+        deadline_list = [i.deadline for i in self.list_of_flower]
         res_deadline = sum(deadline_list) // len(deadline_list)
+
         print(f"The bouquet will fade in {res_deadline} days")
         return res_deadline
 
     def sort_cost(self):
-        sorted_cost = []
-        for i in self.list_of_flower:
-            sorted_cost.append(i.cost)
+
+        sorted_cost = [i.cost for i in self.list_of_flower]
         res_cost = sorted(sorted_cost)
+
         print(f"The bouquet sorted from min to max {res_cost}")
         return res_cost
 
@@ -50,10 +49,10 @@ class Bouquet:
             return False
 
     def total(self):
-        total_cost = []
-        for i in self.list_of_flower:
-            total_cost.append(i.cost)
+
+        total_cost = [i.cost for i in self.list_of_flower]
         res_total = sum(total_cost)
+
         print(f"Total cost per bouquet {res_total}$ ")
         return res_total
 
