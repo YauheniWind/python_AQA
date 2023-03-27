@@ -10,22 +10,11 @@ class Flower:
         )
 
 
-class Rose(Flower):
-    def __init__(self, name: str, cost: int, deadline: int):
-        super().__init__(name, cost, deadline)
-
-
-class Sunflower(Flower):
-    def __init__(self, name: str, cost: int, deadline: int):
-        super().__init__(name, cost, deadline)
-
-
 class Bouquet:
     def __init__(self, list_of_flower):
         self.list_of_flower = list_of_flower
 
     def deadline_flower(self):
-
         deadline_list = [i.deadline for i in self.list_of_flower]
         res_deadline = sum(deadline_list) // len(deadline_list)
 
@@ -33,23 +22,21 @@ class Bouquet:
         return res_deadline
 
     def sort_cost(self):
-
         sorted_cost = [i.cost for i in self.list_of_flower]
         res_cost = sorted(sorted_cost)
 
         print(f"The bouquet sorted from min to max {res_cost}")
         return res_cost
 
-    def find_flower(self, f):
-        if f in self.list_of_flower:
-            print(f"Flower {f} is in bouquet")
+    def find_flower(self, flower):
+        if flower in self.list_of_flower:
+            print(f"Flower {flower} is in bouquet")
             return True
         else:
-            print(f"Flower {f} is not in bouquet")
+            print(f"Flower {flower} is not in bouquet")
             return False
 
     def total(self):
-
         total_cost = [i.cost for i in self.list_of_flower]
         res_total = sum(total_cost)
 
@@ -57,8 +44,8 @@ class Bouquet:
         return res_total
 
 
-rose = Rose("Rose", 5, 7)
-sunflower = Sunflower("Sunflower", 2, 10)
+rose = Flower("Rose", 5, 7)
+sunflower = Flower("Sunflower", 2, 10)
 rose.show_info()
 sunflower.show_info()
 
