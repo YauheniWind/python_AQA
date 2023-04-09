@@ -45,5 +45,3 @@ def uniq_list(only_one):
 
 uniq = [1, 2, 3, 4, 3, 2, 5, 1, 4, 6, 7, 1, 8, 2, 3]
 uniq_list_val = uniq_list(uniq)
-
-print(f"Uniq list: {uniq_list_val}")

@@ -1,15 +1,13 @@
-def number_product(n):
+def number_product(num):
     product = 1
-    while n > 0:
-        product *= n
-        n -= 1
+    while num > 0:
+        product *= num
+        num -= 1
     return product
 
 
-print(number_product(5))
-
-s1 = int(input("Enter area one: "))
-s2 = int(input("Enter area two: "))
+s1 = 1
+s2 = 2
 
 
 def area_calculation(s_one, s_two):
@@ -25,9 +23,6 @@ def area_calculation(s_one, s_two):
         return s_one, s_two, year
     else:
         return "Error"
-
-
-area_calculation(s1, s2)
 
 
 def count_number(n):
@@ -47,9 +42,6 @@ def count_number(n):
         return "Error"
 
 
-print(count_number(123))
-
-
 def range_between(grandchild, grandpa):
     activate = True
     sum_of_year = 0
@@ -60,6 +52,3 @@ def range_between(grandchild, grandpa):
         print(f"Grandchild: {grandchild + sum_of_year}")
         activate = False
     return sum_of_year
-
-
-print(range_between(2, 40))

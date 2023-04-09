@@ -24,11 +24,7 @@ def count_positive_numbers(*args):
     return counter_positive
 
 
-print(
-    f"Positive numbers: {count_positive_numbers(number_one, number_two, number_three)}"
-)
-
-year = int(input("Enter number of year: "))
+year = 2023
 
 
 def counting_year(a):
@@ -42,9 +38,7 @@ def counting_year(a):
         return "366"
 
 
-print(counting_year(year))
-
-day = int(input("Enter number in range 1-7: "))
+day = 2
 
 
 def what_day_is_it_today(number):
@@ -67,10 +61,8 @@ def what_day_is_it_today(number):
             return "Out of range"
 
 
-print(what_day_is_it_today(day))
-
-unit_of_measurement = int(input("Enter unit of measurement in range 1-5: "))
-body_weight = int(input("Enter body weight: "))
+unit_of_measurement = 2
+body_weight = 2
 
 
 def body_weight_in_kilo(measurement, body_w):
@@ -87,6 +79,3 @@ def body_weight_in_kilo(measurement, body_w):
             return body_w * 100
         case _:
             return "Out of range"
-
-
-print(body_weight_in_kilo(unit_of_measurement, body_weight))
