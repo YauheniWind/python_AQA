@@ -1,5 +1,5 @@
 import hw_3
-import hw_4.loop_while
+import hw_4
 
 # HW_3
 print("-------HW_3-------")

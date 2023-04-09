@@ -3,14 +3,6 @@ import unittest
 from core.hw_3_hw_4.hw_3 import delete_space
 from core.hw_3_hw_4.hw_4 import number_product, area_calculation, plus_in_range
 
-# Find the product of all numbers from 0 to N
-# def number_product(n):
-#     product = 1
-#     while n > 0:
-#         product *= n
-#         n -= 1
-#     return product
-
 
 class TestFac(unittest.TestCase):
     def test_equal(self):
@@ -23,7 +15,7 @@ class TestFac(unittest.TestCase):
         self.assertIsInstance(number_product(2), float, "Data can't be a float")
 
     def test_n_is_str(self):
-        self.assertIsInstance(number_product(2), str, "Data can't be a string")
+        self.assertIsInstance(number_product("2"), str, "Data can't be a string")
 
 
 class TestDeleteSpace(unittest.TestCase):
@@ -44,6 +36,7 @@ class TestDeleteSpace(unittest.TestCase):
 
 
 # Find the sum of all integers from A to B inclusive
+
 
 class TestSumIntegers(unittest.TestCase):
     def test_value_b_more_a(self):
@@ -66,7 +59,9 @@ class TestSumIntegers(unittest.TestCase):
 
 class TestArea(unittest.TestCase):
     def test_value_int(self):
-        self.assertEqual(area_calculation(1, 2), (16, 162, 5), "Expected result != actual result")
+        self.assertEqual(
+            area_calculation(1, 2), (16, 162, 5), "Expected result != actual result"
+        )
 
     @unittest.expectedFailure
     def test_first_val_is_negative(self):
