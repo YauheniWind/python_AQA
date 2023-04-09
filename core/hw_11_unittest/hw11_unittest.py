@@ -14,10 +14,10 @@ from core.hw_3_hw_4.hw_4 import number_product, area_calculation, plus_in_range
 
 class TestFac(unittest.TestCase):
     def test_equal(self):
-        self.assertEqual(number_product(5), 120, "120")
+        self.assertEqual(number_product(5), 120, "N != 120")
 
     def test_n_is_int(self):
-        self.assertIsInstance(number_product(1), int, "True")
+        self.assertIsInstance(number_product(1), int, "Data is not integer")
 
     def test_n_is_float(self):
         self.assertIsInstance(number_product(2), float, "Data can't be a float")
@@ -28,13 +28,13 @@ class TestFac(unittest.TestCase):
 
 class TestDeleteSpace(unittest.TestCase):
     def test_delete_space_at_the_beginning(self):
-        self.assertEqual(delete_space(" Hello"), "Hello", "True")
+        self.assertEqual(delete_space(" Hello"), "Hello", "data is not string")
 
     def test_delete_space_at_the_end(self):
-        self.assertEqual(delete_space("Hello "), "Hello", "True")
+        self.assertEqual(delete_space("Hello "), "Hello", "data is not string")
 
     def test_delete_space_at_the_beginning_and_end(self):
-        self.assertEqual(delete_space(" Hello "), "Hello", "True")
+        self.assertEqual(delete_space(" Hello "), "Hello", "data is not string")
 
     def test_delete_space_at_the_beginning_int(self):
         self.assertEqual(delete_space(int(" 11")), "11", "Data can't be a int")
@@ -47,10 +47,10 @@ class TestDeleteSpace(unittest.TestCase):
 
 class TestSumIntegers(unittest.TestCase):
     def test_value_b_more_a(self):
-        self.assertEqual(plus_in_range(1, 5), 15, "Passed")
+        self.assertEqual(plus_in_range(1, 5), 15, "A more then B")
 
     def test_return_int(self):
-        self.assertIsInstance(plus_in_range(1, 2), int, "Passed")
+        self.assertIsInstance(plus_in_range(1, 2), int, "Returned data is not integer")
 
     def test_value_a_more_b(self):
         self.assertEqual(
@@ -66,7 +66,7 @@ class TestSumIntegers(unittest.TestCase):
 
 class TestArea(unittest.TestCase):
     def test_value_int(self):
-        self.assertEqual(area_calculation(1, 2), (16, 162, 5), "Passed")
+        self.assertEqual(area_calculation(1, 2), (16, 162, 5), "Expected result != actual result")
 
     @unittest.expectedFailure
     def test_first_val_is_negative(self):
