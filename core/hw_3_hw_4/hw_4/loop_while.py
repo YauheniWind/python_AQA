@@ -1,4 +1,6 @@
 def number_product(num):
+    if type(num) != int:
+        return "Error"
     product = 1
     while num > 0:
         product *= num
@@ -11,6 +13,8 @@ s2 = 2
 
 
 def area_calculation(s_one, s_two):
+    if s_one <= 0 or s_two <= 0:
+        return "Error"
     if type(s_one) and type(s_two) == int:
         year = 1
         while s_one > 0.1 * s_two:
