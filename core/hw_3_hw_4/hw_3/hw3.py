@@ -38,7 +38,7 @@ def delete_space(string):
     if type(string) == str:
         return f"{string}".strip()
     else:
-        return f"something wrong {string}"
+        return "Error"
 
 
 # Task 6
