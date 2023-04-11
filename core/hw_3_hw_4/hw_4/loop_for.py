@@ -1,16 +1,25 @@
-def plus_in_range(range_one, range_two):
-    result = 0
-    for i in range(range_one, range_two):
-        result += i
-    return result
+def plus_in_range(a, b):
+    total = 0
+    if a < 0 or b < 0:
+        return "Error"
+    if type(a) == str or type(b) == str:
+        return a + b
+    else:
+        try:
+            if a > b:
+                a, b = b, a
+
+            for i in range(a, b + 1):
+                total += i
+        except:
+            raise TypeError("Type is not integer or string")
+
+    return total
 
 
-print(plus_in_range(1, 11))
+first_number = 1
+second_number = 4
 
-first_number = int(input("First number: "))
-second_number = int(input("Second number: "))
-
-print(plus_in_range(first_number, second_number))
 
 dict_of_swim = {
     "Бекиш Александр": 21.07,
@@ -32,9 +41,6 @@ def winner(dict_swim):
     return f"Person: {person}, time: {time}"
 
 
-print(winner(dict_of_swim))
-
-
 def uniq_number(array):
     if type(array) == list:
         for item in array:
@@ -46,5 +52,3 @@ def uniq_number(array):
 
 pair_arr = [1, 5, 2, 9, 2, 9, 1]
 result_uniq = uniq_number(pair_arr)
-
-print(result_uniq)

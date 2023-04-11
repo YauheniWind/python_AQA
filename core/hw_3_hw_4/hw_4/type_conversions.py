@@ -9,8 +9,6 @@ def string_to_array(string):
         return string.split()
 
 
-print(f"Name: {string_to_array(robin_name)} ,Love: {string_to_array(love)}")
-
 ivan_name = ["Ivan", "Ivanou"]
 name_of_city = "Minsk"
 name_of_country = "Belarus"
@@ -24,8 +22,6 @@ def greeting(list_name, city, country):
         return f"Error: {list_name} is not list"
 
 
-print(greeting(ivan_name, name_of_city, name_of_country))
-
 love_list = ["I", "love", "arrays", "they", "are", "my", "favorite"]
 
 
@@ -36,8 +32,6 @@ def join_strings(join_list):
         return f"Error: {join_list} is not list"
 
 
-print(join_strings(love_list))
-
 somthing_list = [12, 34, 56, 76, 234, 546, 6322, 5677, 23, 34]
 
 
@@ -46,8 +40,6 @@ def insert_and_pop_element(list_of_el, insert_el_one, insert_el_two, pop_el):
     list_of_el.pop(pop_el)
     return list_of_el
 
-
-print(f"Update list: {insert_and_pop_element(somthing_list, 3, 44, 6)}")
 
 a = {"a": 1, "b": 2, "c": 3}
 b = {"c": 3, "d": 4, "e": 5}
@@ -69,9 +61,6 @@ def reunion(dict_one, dict_two, reunio_dict):
     return reunio_dict
 
 
-print(reunion(a, b, ab))
-
-
 def uniq_number(array):
     if type(array) == list:
         for item in array:
@@ -83,8 +72,6 @@ def uniq_number(array):
 
 pair_arr = [1, 5, 2, 9, 2, 9, 1]
 result_uniq = uniq_number(pair_arr)
-
-print(result_uniq)
 
 sometext = "How do you do?"
 
@@ -106,6 +93,3 @@ def count_letter(string):
     else:
         index_value = max(dik, key=dik.get)
         return f"Most common letter: {index_value}"
-
-
-print(count_letter(sometext))
