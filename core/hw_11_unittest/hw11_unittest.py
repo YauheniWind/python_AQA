@@ -42,6 +42,9 @@ class TestSumIntegers(unittest.TestCase):
     def test_value_b_more_a(self):
         self.assertEqual(plus_in_range(1, 5), 15, "A more then B")
 
+    def test_negative_values(self):
+        self.assertEqual(plus_in_range(-1, 2), "Error", "Some value is < 0")
+
     def test_return_int(self):
         self.assertIsInstance(plus_in_range(1, 2), int, "Returned data is not integer")
 

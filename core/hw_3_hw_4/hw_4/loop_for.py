@@ -1,5 +1,7 @@
 def plus_in_range(a, b):
     total = 0
+    if a < 0 or b < 0:
+        return "Error"
     if type(a) == str or type(b) == str:
         return a + b
     else:
