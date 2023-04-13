@@ -29,10 +29,10 @@ class TestDeleteSpace(unittest.TestCase):
         self.assertEqual(delete_space(" Hello "), "Hello", "data is not string")
 
     def test_delete_space_at_the_beginning_int(self):
-        self.assertEqual(delete_space(int(" 11")), "11", "Data can't be a int")
+        self.assertEqual(delete_space(int(" 11")), "Error", "Data can't be a int")
 
     def test_delete_space_at_the_end_int(self):
-        self.assertEqual(delete_space(int("11 ")), "11", "Data can't be a int")
+        self.assertEqual(delete_space(int("11 ")), "Error", "Data can't be a int")
 
 
 # Find the sum of all integers from A to B inclusive

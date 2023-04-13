@@ -1,9 +1,9 @@
 def plus_in_range(a, b):
     total = 0
+    if type(a) == str or type(b) == str or type(a) == float or type(b) == float:
+        return "Error"
     if a < 0 or b < 0:
         return "Error"
-    if type(a) == str or type(b) == str:
-        return a + b
     else:
         try:
             if a > b:
