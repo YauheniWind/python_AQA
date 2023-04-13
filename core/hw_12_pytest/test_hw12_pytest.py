@@ -13,6 +13,8 @@ class TestDelete:
             (" Hello ", "Hello"),
             (int(" 11"), "Error"),
             (int("11 "), "Error"),
+            ("", ""),
+            ("   ", ""),
         ],
     )
     def test_delete_space(self, value, expected_value):
@@ -21,7 +23,13 @@ class TestDelete:
 
 class TestNumberProduct:
     @pytest.mark.parametrize(
-        "value,expected_value", [(5, 120), ("string", "Error"), (1.1, "Error")]
+        "value,expected_value", [
+            (5, 120),
+            ("string", "Error"),
+            (1.1, "Error"),
+            (-1, 1),
+            (10, 3628800)
+        ]
     )
     def test_number_product(self, value, expected_value):
         assert number_product(value) == expected_value
